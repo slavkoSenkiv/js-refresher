@@ -123,3 +123,16 @@ const extendedUser = {
   ...user3
 }
 console.log(extendedUser);
+/////////////////////////////////////////////////
+// Control structures & in vs of for loops 
+/////////////////////////////////////////////////
+console.log('arr / of');
+const hobbies6 = ['a', 'b', 'c'];
+for (let hobbie of hobbies6) { // of - returns values
+  console.log(hobbie + '!');
+}
+console.log('arr / in');
+const hobbies7 = ['a', 'b', 'c'];
+for (let hobbie in hobbies7) { // in - returns keys
+  console.log(hobbie + '!');
+}
