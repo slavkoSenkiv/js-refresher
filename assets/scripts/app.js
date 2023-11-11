@@ -101,3 +101,25 @@ const user2 = {
 
 logUser1(user2);
 logUser2(user2);
+/////////////////////////////////////////////////
+// Spread operator
+/////////////////////////////////////////////////
+
+const hobbies2 = ['a', 'b', 'c'];
+const hobbies3 = ['d'];
+const hobbies4 = hobbies2 + hobbies3; // output = a,b,cd
+const hobbies5 = [...hobbies2, ...hobbies3] // output is correct
+console.log(hobbies4);
+console.log(hobbies5);
+
+const user3 = {
+  name: 'slav3',
+  age: 33
+}
+console.log(user3);
+
+const extendedUser = {
+  isAdmin: true,
+  ...user3
+}
+console.log(extendedUser);
