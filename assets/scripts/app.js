@@ -150,3 +150,18 @@ const msg2 = () => {
 setTimeout(msg1, 1000);
 setTimeout(msg2, 2000);
 setTimeout(() => console.log('msg3'), 3000);
+
+/////////////////////////////////////////////////
+// defining functions within other functions
+/////////////////////////////////////////////////
+
+function init() {
+  function greet() {
+    console.log('hi');
+  }
+  greet();
+}
+
+init();
+
+
