@@ -51,7 +51,7 @@ console.log(fun5);
 /////////////////////////////////////////////////
 // Arrays
 /////////////////////////////////////////////////
-const hobbies = ['a', 'b', 'c'];
+//const hobbies = ['a', 'b', 'c'];
 //console.log(hobbies.findIndex('a')); wrong way to do it
 // foloving variant is ok but longer more readable version
 /* const index = hobbies.findIndex((item)=>{
@@ -61,4 +61,43 @@ console.log(index); */
 // folowing variant is shorter but less readable version
 console.log(hobbies.findIndex(item => item === 'b'));
 console.log(hobbies.map(item => item + '!'));
+const hobbies = ['a', 'b', 'c'];
+console.log(hobbies.map(item => ({key: item}))); // returned object has to be wrapped in brekets otherwise JS consider it to be a function
+/////////////////////////////////////////////////
+// Destructuring
+/////////////////////////////////////////////////
+const tesArr = ['Slav', 'Senkiv'];
+const [fname, lname] = tesArr;
+const [fname2, lname2] = ['Slav2', 'Senkiv2'];
+console.log(fname, lname);
+console.log(fname2, lname2);
 
+const user = {
+  name: 'slav3',
+  age: 33
+}
+
+const { name, age } = user;
+const { name: name3, age: age3 } = user;
+
+const {name4, age4} = {
+  name4: 'slav4',
+  age4: 44
+}
+console.log(name, age);
+console.log(name3, age3);
+console.log(name4, age4);
+
+function logUser1(someUser){
+  console.log(someUser.name, someUser.age);
+}
+function logUser2({name, age}){
+  console.log(name, age);
+}
+const user2 = {
+  name: 'slav3',
+  age: 33
+}
+
+logUser1(user2);
+logUser2(user2);
