@@ -136,3 +136,17 @@ const hobbies7 = ['a', 'b', 'c'];
 for (let hobbie in hobbies7) { // in - returns keys
   console.log(hobbie + '!');
 }
+/////////////////////////////////////////////////
+// passing functions as arguments to other functions
+/////////////////////////////////////////////////
+function msg1() {
+  console.log('msg1');
+}
+
+const msg2 = () => {
+  console.log('msg2');
+}
+
+setTimeout(msg1, 1000);
+setTimeout(msg2, 2000);
+setTimeout(() => console.log('msg3'), 3000);
